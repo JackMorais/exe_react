@@ -1,0 +1,13 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 200px;
+    
+}
+
+input{
+    width: 600px;
+    height: 30px;
+    margin-top: 10px;
+}
