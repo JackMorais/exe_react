@@ -6,7 +6,7 @@ const  Formulario = () => {
   let [Altura, setAltura] = useState(0);
 
   const Resultado = () => {
-    const imc = Peso * Altura;
+    const imc = (Peso/(Altura*Altura)).toFixed(2);
 
     if(imc <= 17){
       return (
@@ -26,8 +26,8 @@ const  Formulario = () => {
   }
   return(
     <form className={styles.form}>
-      <input type="number" placeholder="Digite sua altura" onChange={evento => setPeso(parseFloat(evento.target.value))}/>
-      <input type="number" placeholder="Digite seu peso" onChange={evento => setAltura(parseFloat(evento.target.value))}/>
+      <input type="number" placeholder="Digite seu peso" onChange={evento => setPeso(parseFloat(evento.target.value))}/>
+      <input type="number" placeholder="Digite sua altura" onChange={evento => setAltura(parseFloat(evento.target.value))}/>
       { Resultado() }
     </form>
   )
